@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "description": "bellaciao",
+  "display": "standalone",
+  "name": "bellaciao",
+  "short_name": "bellaciao",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "scope": "/"
+}
