@@ -5,7 +5,7 @@ MinimumVisualStudioVersion = 15.0.26124.0
 
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F87C8782-B4F1-4907-A869-B227EEF1F89B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bellaciao", "bellaciao\bellaciao.csproj", "{1093F49B-BAE1-4844-BF68-99127191142A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bellaciao", "bellaciao.csproj", "{1093F49B-BAE1-4844-BF68-99127191142A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bellaciao.Tests", "bellaciao.Tests\bellaciao.Tests.csproj", "{52EC5CF2-CAD9-4E66-9C80-EF2F5187DA9C}"
 EndProject
