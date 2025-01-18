@@ -34,7 +34,7 @@ jobs:
         mkdir -p $DEPLOY_PATH
 
         # Копируем скомпилированные файлы в папку на сервере
-        cp -r bellaciao/bin/Release/net8.0-browserwasm/wwwroot/* $DEPLOY_PATH
+        cp -r bellaciao/bin/Release/net8.0-browserwasm/ $DEPLOY_PATH
 
         # Перезапускаем веб-сервер, если это необходимо
         sudo systemctl restart nginx  # Или замените на ваш веб-сервер, если используется другой
