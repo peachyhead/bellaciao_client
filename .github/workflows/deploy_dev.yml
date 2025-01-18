@@ -1,0 +1,44 @@
+name: Deploy Uno WebAssembly App
+
+on:
+  push:
+    branches:
+      - main  # Триггер на пуш в основную ветку
+
+jobs:
+  deploy:
+    name: Build and Deploy Uno WebAssembly App
+    runs-on: self-hosted  # Используем self-hosted раннер
+
+    steps:
+    # 1. Checkout репозиторий
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # 2. Установить .NET SDK
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0.x  # Убедитесь, что это соответствует вашему таргету
+
+    # 3. Сборка Uno WebAssembly проекта
+    - name: Build Uno WebAssembly App
+      run: |
+        dotnet build bellaciao/bellaciao.csproj -c Release -f net8.0-browserwasm
+
+    # 4. Копирование собранных файлов на сервер
+    - name: Deploy to server
+      run: |
+        # Убедитесь, что папка для деплоя существует
+        DEPLOY_PATH="/var/www/html/bellaciao"
+        mkdir -p $DEPLOY_PATH
+
+        # Копируем скомпилированные файлы в папку на сервере
+        cp -r bellaciao/bin/Release/net8.0-browserwasm/wwwroot/* $DEPLOY_PATH
+
+        # Перезапускаем веб-сервер, если это необходимо
+        sudo systemctl restart nginx  # Или замените на ваш веб-сервер, если используется другой
+
+    # 5. (Необязательно) Уведомление об успешном деплое
+    - name: Notify Deployment
+      run: echo "Deployment completed successfully!"
