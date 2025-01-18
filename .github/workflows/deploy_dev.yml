@@ -3,7 +3,7 @@ name: Deploy Uno WebAssembly App
 on:
   push:
     branches:
-      - main  # Триггер на пуш в основную ветку
+      - develop  # Триггер на пуш в основную ветку
 
 jobs:
   deploy:
