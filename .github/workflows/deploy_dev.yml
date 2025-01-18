@@ -31,10 +31,9 @@ jobs:
       run: |
         # Убедитесь, что папка для деплоя существует
         DEPLOY_PATH="/var/www/html/bellaciao"
-        mkdir -p $DEPLOY_PATH
-
-        # Копируем скомпилированные файлы в папку на сервере
-        cp -r bellaciao/bin/Release/net8.0-browserwasm/ $DEPLOY_PATH
+        sudo mkdir -p $DEPLOY_PATH
+        sudo cp -r bellaciao/bin/Release/net8.0-browserwasm/* $DEPLOY_PATH
+        sudo systemctl restart nginx
 
         # Перезапускаем веб-сервер, если это необходимо
         sudo systemctl restart nginx  # Или замените на ваш веб-сервер, если используется другой
