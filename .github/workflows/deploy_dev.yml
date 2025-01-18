@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     name: Build and Deploy Uno WebAssembly App
-    runs-on: self-hosted  # Используем self-hosted раннер
+    runs-on: self-hosted
 
     steps:
     # 1. Checkout репозиторий
@@ -30,13 +30,13 @@ jobs:
     - name: Deploy to server
       run: |
         # Убедитесь, что папка для деплоя существует
-        DEPLOY_PATH="/var/www/html/bellaciao"
+        DEPLOY_PATH="/var/www/myclassroom.ru"
         sudo mkdir -p $DEPLOY_PATH
         sudo cp -r bellaciao/bin/Release/net8.0-browserwasm/* $DEPLOY_PATH
         sudo systemctl restart nginx
 
         # Перезапускаем веб-сервер, если это необходимо
-        sudo systemctl restart nginx  # Или замените на ваш веб-сервер, если используется другой
+        sudo systemctl restart nginx
 
     # 5. (Необязательно) Уведомление об успешном деплое
     - name: Notify Deployment
