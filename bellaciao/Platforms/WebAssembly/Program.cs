@@ -8,6 +8,7 @@ public class Program
     {
         Microsoft.UI.Xaml.Application.Start(_ => _app = new App());
 
+        
         return 0;
     }
 }
