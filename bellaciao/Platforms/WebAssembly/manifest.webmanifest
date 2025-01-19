@@ -1,9 +1,9 @@
 {
   "background_color": "#ffffff",
-  "description": "bellaciao",
+  "description": "myclassroom",
   "display": "standalone",
-  "name": "bellaciao",
-  "short_name": "bellaciao",
+  "name": "myclassroom",
+  "short_name": "myclassroom",
   "start_url": "/index.html",
   "theme_color": "#ffffff",
   "scope": "/"

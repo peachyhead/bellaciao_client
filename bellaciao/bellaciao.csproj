@@ -6,16 +6,16 @@
     <UnoSingleProject>true</UnoSingleProject>
 
     <!-- Display name -->
-    <ApplicationTitle>bellaciao</ApplicationTitle>
+    <ApplicationTitle>myclassroom</ApplicationTitle>
     <!-- App Identifier -->
-    <ApplicationId>com.companyname.bellaciao</ApplicationId>
+    <ApplicationId>com.companyname.myclassroom</ApplicationId>
     <!-- Versions -->
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
     <ApplicationVersion>1</ApplicationVersion>
     <!-- Package Publisher -->
-    <ApplicationPublisher>bellaciao</ApplicationPublisher>
+    <ApplicationPublisher>myclassroom</ApplicationPublisher>
     <!-- Package Description -->
-    <Description>bellaciao powered by Uno Platform.</Description>
+    <Description>myclassroom powered by Uno Platform.</Description>
     <!--
       If you encounter this error message:
 

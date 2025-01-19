@@ -1,5 +1,5 @@
 <linker>
-  <assembly fullname="bellaciao" />
+  <assembly fullname="myclassroom" />
 
   <!--
   Uncomment this section when using JSON.NET
